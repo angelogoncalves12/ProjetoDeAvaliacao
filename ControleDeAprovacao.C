@@ -109,7 +109,7 @@ else {
     printf ("Aluno Reprovado\n");
     reprovados++;
 }
-*\
+*/
         if (notas[i] <= 7 && frequencia <= 75) {
             printf ("Aluno Reprovado\n");
             reprovados++;
