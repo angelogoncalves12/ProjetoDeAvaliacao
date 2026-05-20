@@ -98,18 +98,17 @@ int main() {
         if (notas[i] > maiorNota){
             maiorNota = notas[i];
         }
-        /* AQUI ABRI UMA CADEIA DE CONDICIONAIS PARA QUE NÃO HAJA ERRO 
-CASO SEJA INSERIDO VALORES ACIMA OU ABAIXO DO PERMITIDO, 
-MAS PODERIA SER FEITO DA SEGUINTE FORMA: 
- if (notas[i] >=7 && frequencia >=75) {
-        printf ("Aluno Aprovado\n");
-        aprovados++;
+        
+         if (notas[i] >=7 && frequencia >=75) {
+            printf ("Aluno Aprovado\n");
+            aprovados++;
         }
-else {
-    printf ("Aluno Reprovado\n");
-    reprovados++;
-}
-*/
+        else {
+            printf ("Aluno Reprovado\n");
+            reprovados++;
+        }
+
+/* Aqui também é possível usarmos uma cadeia complexa utilizando &&:
         if (notas[i] <= 7 && frequencia <= 75) {
             printf ("Aluno Reprovado\n");
             reprovados++;
@@ -129,6 +128,7 @@ else {
         else {
             printf ("Erro de Sintaxe\n");
         }
+*/
     }
         printf ("O número de aprovados foi: %d\n", aprovados);
         printf ("O número de reprovados foi: %d\n", reprovados);
