@@ -1,2 +1,7 @@
 # ProjetoDeAvaliacao
-Questões relacionadas as práticas de C.
+## Questões relacionadas as práticas de C.
+'Treinamento de:'
+### CONDICIONAIS
+### LOOPS
+### LÓGICA
+
