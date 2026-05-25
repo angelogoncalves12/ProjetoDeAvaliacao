@@ -76,7 +76,6 @@ int main() {
 
     return 0;
 }*/
-
 #include <stdio.h>
 int main() {
     float notas[8];
@@ -94,11 +93,17 @@ int main() {
 
         printf ("Insira a Frequência do Aluno: ");
         scanf ("%f", &frequencia);
-
-        if (notas[i] > maiorNota){
-            maiorNota = notas[i];
-        }
         
+         if (notas[i] >=7 && frequencia >=75) {
+            printf ("Aluno Aprovado\n");
+            aprovados++;
+        }
+        else {
+            printf ("Aluno Reprovado\n");
+            reprovados++;
+        }
+
+/* Aqui também é possível usarmos uma cadeia complexa utilizando &&:
         if (notas[i] <= 7 && frequencia <= 75) {
             printf ("Aluno Reprovado\n");
             reprovados++;
@@ -118,10 +123,17 @@ int main() {
         else {
             printf ("Erro de Sintaxe\n");
         }
+*/
     }
+ 
+    for (i=1; i<=8; i++) {
+        if (notas[i] >= maiorNota){
+            maiorNota = notas[i];
+        }
+    }
+        
         printf ("O número de aprovados foi: %d\n", aprovados);
         printf ("O número de reprovados foi: %d\n", reprovados);
         printf ("A maior nota registrada: %.2f\n", maiorNota);
    
-    return 0;
-}
+    return 0; }
