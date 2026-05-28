@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+    int idades[10];
+    int autorizacao;
+
+    int i;
+
+    int liberados = 0;
+    int negados = 0;
+
+    int maiorIdade = 0;
+
+    int somaIdades = 0;
+    float media;
+
+    printf ("Evento de Tecnologia\n");
+    printf ("Registro de Participantes:\n");
+
+    for (i=0; i < 10; i++) {
+        printf ("Insira a idade do participante %d:", i + 1);
+        scanf ("%d", &idades[i]);
+
+        printf ("Confirme sua autorização (0/1): ");
+        scanf ("%d", &autorizacao);
+        
+        somaIdades += idades[i];
+        
+        if (idades [i] > maiorIdade){
+            maiorIdade = idades[i];
+        }
+        
+        if (idades[i] >= 18 || autorizacao == 1){
+            printf ("ENTRADA PERMITIDA!\n");
+            liberados++;
+        }
+        else {
+            printf ("ENTRADA NEGADA! \n");
+            negados++;
+        }
+
+}
+media = somaIdades / 10.0;
+printf ("Todos os participantes foram registrados com sucesso!\n");
+printf ("Foram %d participantes liberados para o evento!\n", liberados);
+printf ("%d participantes NÃO foram liberados para o evento... \n", negados);
+
+printf ("CURIOSIDADE!! \n");
+printf ("A média das idades fornecidas foi de %.2f !\n", media);
+printf ("A maior idade fornecida foi: %d!!\n", maiorIdade);
+printf ("AGUARDAMOS OS APROVADOS NO EVENTO!! \n");
+
+    return 0;
+}
